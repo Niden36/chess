@@ -45,6 +45,21 @@
     <ClCompile Include="pawns.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="bishops.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rooks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="springers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="queens.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="print.h">
@@ -72,6 +87,21 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="pawns.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bishops.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rooks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="springers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="queens.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kings.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

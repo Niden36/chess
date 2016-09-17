@@ -1,4 +1,5 @@
 #include <iostream>
+#include "pawns.h"
 using namespace std;
 
 void whitepawn(int n, int m, int moves[10][10])
