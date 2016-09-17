@@ -3,6 +3,22 @@
 #include <iomanip>
 #include <string>
 #include "check.h"
+#include "pawns.h"
+
+#define white_pawn 112
+#define black_pawn 80
+#define white_bishop 98
+#define black_bishop 66
+#define white_rook 114
+#define black_rook 82
+#define white_springer 115
+#define black_springer 83
+#define white_queen 113
+#define black_queen 81
+#define white_king 75	
+#define black_king 117
+#define checkwhite moves[x1][y1] >= 66 && 83 >= moves[x1][y1]
+
 int check(char n, int m, char j, int k, int t[10][10]) // function checking the available spaces for movment of a specific piece
 {
 	char x1, x2, x3, x4;
@@ -24,42 +40,14 @@ int check(char n, int m, char j, int k, int t[10][10]) // function checking the 
 	piece = t[n][m];
 	switch (piece)
 	{
-	case 112:    //white pawns 
-		x1 = n;
-		y1 = m - 1;
-		x2 = x1 - 1;
-		x3 = x1 + 1;
-		if (moves[x1][y1] == 0)
-			moves[x1][y1] = 1;
-		if (moves[x2][y1] >= 66 && moves[x2][y1] <= 83)
-			moves[x2][y1] = 2;
-		if (moves[x3][y1] >= 66 && moves[x3][y1] <= 83)
-			moves[x3][y1] = 2;
-		if (m == 6)
-			y1--;
-		if (moves[x1][y1] == 0)
-			moves[x1][y1] = 1;
-
+	case white_pawn:    
+		whitepawn(n, m, moves);
 		break;
-	case 80: // black pawns
-		x1 = n;
-		y1 = m + 1;
-		x2 = x1 - 1;
-		x3 = x1 + 1;
-		if (moves[x1][y1] == 0)
-			moves[x1][y1] = 1;
-		if (moves[x2][y1] >= 98 && moves[x2][y1] <= 115)
-			moves[x2][y1] = 2;
-		if (moves[x3][y1] >= 98 && moves[x3][y1] <= 115)
-			moves[x3][y1] = 2;
-		if (m == 1)
-			y1++;
-		if (moves[x1][y1] == 0)
-			moves[x1][y1] = 1;
-
+	case black_pawn: 
+		blackpawn(n, m, moves);
 		break;
-	case 66:        // bishops
-	case 98:
+	case black_bishop:        
+	case white_bishop:
 
 		y1 = m;   // up and left
 		x1 = n;
@@ -207,8 +195,8 @@ int check(char n, int m, char j, int k, int t[10][10]) // function checking the 
 		}
 
 		break;
-	case 82:      // rooks
-	case 114:
+	case black_rook:      // rooks
+	case white_rook:
 
 		y1 = m;   // up 
 		x1 = n;
@@ -348,8 +336,8 @@ int check(char n, int m, char j, int k, int t[10][10]) // function checking the 
 		}
 
 		break;
-	case 83: // springers/knights
-	case 115:
+	case black_springer: // springers/knights
+	case white_springer:
 		y1 = m - 2;
 		y2 = m - 1;
 		y3 = m + 1;
@@ -585,8 +573,8 @@ int check(char n, int m, char j, int k, int t[10][10]) // function checking the 
 			break;
 		}
 		break;
-	case 81:      // queen 
-	case 113:
+	case black_queen:      // queen 
+	case white_queen:
 		y1 = m;   // up and left
 		x1 = n;
 		y1 = x1 - 1;
@@ -869,8 +857,8 @@ int check(char n, int m, char j, int k, int t[10][10]) // function checking the 
 		}
 
 		break;
-	case 75:
-	case 107:
+	case black_king:
+	case white_king:
 		y1 = m - 1;
 		y2 = m;
 		y3 = m + 1;

@@ -149,6 +149,7 @@
     <ClCompile Include="clearscreen.cpp" />
     <ClCompile Include="findk.cpp" />
     <ClCompile Include="move.cpp" />
+    <ClCompile Include="pawns.cpp" />
     <ClCompile Include="print.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
@@ -160,6 +161,7 @@
     <ClInclude Include="clearscreen.h" />
     <ClInclude Include="findk.h" />
     <ClInclude Include="move.h" />
+    <ClInclude Include="pawns.h" />
     <ClInclude Include="print.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
